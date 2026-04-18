@@ -1,7 +1,7 @@
 from flask import Flask, render_template_string, request, redirect, session
 import random, os
 
-app = Flask(___name___)
+app = Flask(__name__)
 app.secret_key = "easy_key"
 
 # Simple Login Page
@@ -47,6 +47,6 @@ def logout():
     session.clear()
     return redirect('/')
 
-if ___name___ == "___main___":
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
